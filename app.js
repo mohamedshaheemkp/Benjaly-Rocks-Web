@@ -52,10 +52,20 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   window.addEventListener('scroll', () => {
-    handleHeaderScroll();
-    handleActiveSectionHighlight();
-    handleHeroParallax();
-  });
+
+  const scrolled = window.pageYOffset;
+
+  document.querySelectorAll('.hero-floating-glow')
+    .forEach((element, index) => {
+
+      const speed = (index + 1) * 0.15;
+
+      element.style.transform =
+        `translateY(${scrolled * speed}px)`;
+
+    });
+
+});
 
   // Run once on load
   handleHeaderScroll();
@@ -252,21 +262,3 @@ document.addEventListener('DOMContentLoaded', () => {
    ADVANCED SCROLL REVEALS
 ========================================== */
 
-const revealElements = document.querySelectorAll(
-  '.section-header, .catalogue-card, .project-card, .hero-stat-item'
-);
-
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('revealed');
-    }
-  });
-}, {
-  threshold: 0.15
-});
-
-revealElements.forEach((element) => {
-  element.classList.add('animate-scroll-reveal');
-  revealObserver.observe(element);
-});

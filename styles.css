@@ -306,10 +306,13 @@ input, select, textarea, button {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('public/images/products/imgi_13_benjaly-rocks-tiles-and-hollow-bricks-chemmad-malappuram-interlocking-bric.webp');
+  background-image:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.7)),
+    url('public/images/hero-bg.jpg');
   background-size: cover;
-  background-position: center 40%;
+  background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   z-index: 0;
   animation: kenBurnsZoom 28s ease-in-out infinite alternate;
 }
@@ -1200,6 +1203,92 @@ input, select, textarea, button {
   box-shadow: 0 15px 40px rgba(197, 168, 128, 0.06);
 }
 
+/* --- 12. ENHANCED PROJECT CARD LAYOUT --- */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: transparent;
+}
+
+.project-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  overflow: hidden;
+}
+
+.project-image-wrapper img,
+.project-image-wrapper .ba-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1), filter 0.45s ease;
+  display: block;
+}
+
+.project-image-wrapper .project-badge,
+.project-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 6;
+  background: linear-gradient(135deg, rgba(197,168,128,0.95), rgba(217,119,6,0.95));
+  color: var(--bg-dark-primary);
+  padding: 6px 10px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  border-radius: 6px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+}
+
+.project-badge.premium {
+  background: linear-gradient(135deg, #ffd88a, #d9912e);
+}
+
+.project-content {
+  padding: 18px 22px 28px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 40%;
+}
+
+.project-content h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  margin: 0;
+  color: var(--color-sand-light);
+}
+
+.project-location {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  display: block;
+}
+
+.project-type, .project-year {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.project-card:hover .project-image-wrapper img,
+.project-card:hover .project-image-wrapper .ba-image {
+  transform: scale(1.06);
+}
+
+.project-card:hover .project-badge {
+  transform: translateY(-4px) scale(1.02);
+}
+
+/* Ensure before/after slider still works and keeps badge above images */
+.before-after-container { z-index: 1; }
+.before-after-container .ba-image { z-index: 1; }
+.project-image-wrapper .project-badge { z-index: 7; }
+
 .strength-icon-box {
   width: 44px;
   height: 44px;
@@ -2048,4 +2137,114 @@ input, select, textarea, button {
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(#c5a880, #d97706);
   border-radius: 999px;
+}
+@media (max-width: 768px) {
+
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .section-padding {
+    padding: 80px 0;
+  }
+
+}
+.floating-whatsapp {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: #25d366;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  z-index: 999;
+  box-shadow: 0 20px 40px rgba(37,211,102,0.35);
+  animation: whatsappFloat 3s infinite ease-in-out;
+}
+
+@keyframes whatsappFloat {
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+
+}
+.trust-strip {
+  overflow: hidden;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  padding: 18px 0;
+  background: #0d0e10;
+}
+
+.trust-track {
+  display: flex;
+  gap: 80px;
+  white-space: nowrap;
+  animation: marqueeMove 18s linear infinite;
+}
+
+.trust-track span {
+  color: rgba(255,255,255,0.7);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+@keyframes marqueeMove {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+
+}
+.project-image-wrapper {
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.project-image-wrapper img {
+  transition: transform 0.8s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
+}
+.section-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: rgba(197,168,128,0.08);
+  filter: blur(120px);
+  z-index: 0;
 }

@@ -153,3 +153,172 @@ Avoid:
 - Too much text
 
 The final website should feel modern, clean, cinematic, premium, and trustworthy.
+
+
+STEP 22 — CURSOR HOVER EFFECT
+
+Add this JS BELOW cursor JS:
+
+const hoverTargets = document.querySelectorAll(
+  'a, button, .catalogue-card, .project-card'
+);
+
+hoverTargets.forEach((target) => {
+
+  target.addEventListener('mouseenter', () => {
+
+    cursor.style.width = '60px';
+    cursor.style.height = '60px';
+    cursor.style.background = 'rgba(197,168,128,0.15)';
+
+  });
+
+  target.addEventListener('mouseleave', () => {
+
+    cursor.style.width = '20px';
+    cursor.style.height = '20px';
+    cursor.style.background = 'transparent';
+
+  });
+
+});
+STEP 23 — ADD IMAGE GRAIN TEXTURE
+
+Luxury websites use subtle noise texture.
+
+Add this CSS
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  z-index: 9999;
+
+  background-image:
+    url('https://grainy-gradients.vercel.app/noise.svg');
+}
+STEP 24 — ADD GLASS NAVBAR
+
+Find navbar CSS.
+
+REPLACE with:
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background: rgba(10,11,13,0.6);
+  backdrop-filter: blur(20px);
+
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+
+  transition: all 0.4s ease;
+}
+STEP 25 — NAVBAR SCROLL EFFECT
+
+Add to app.js
+
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+
+  if (window.scrollY > 50) {
+
+    navbar.style.background =
+      'rgba(10,11,13,0.85)';
+
+    navbar.style.backdropFilter =
+      'blur(24px)';
+
+  } else {
+
+    navbar.style.background =
+      'rgba(10,11,13,0.6)';
+  }
+
+});
+STEP 26 — PREMIUM LOADING SCREEN
+
+Inside <body> FIRST:
+
+<div class="loader">
+
+  <div class="loader-logo">
+    BENJALY ROCKS
+  </div>
+
+</div>
+CSS
+.loader {
+  position: fixed;
+  inset: 0;
+  background: #0a0b0d;
+  z-index: 100000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: opacity 1s ease;
+}
+
+.loader-logo {
+  font-size: 2rem;
+  letter-spacing: 10px;
+  color: #c5a880;
+}
+JS
+window.addEventListener('load', () => {
+
+  const loader = document.querySelector('.loader');
+
+  setTimeout(() => {
+
+    loader.style.opacity = '0';
+
+    setTimeout(() => {
+
+      loader.style.display = 'none';
+
+    }, 1000);
+
+  }, 1200);
+
+});
+STEP 27 — ADD STAGGERED HERO ANIMATIONS
+
+Add CSS:
+
+.animate-fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s forwards;
+}
+
+.animate-fade-in:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.animate-fade-in:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.animate-fade-in:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.animate-fade-in:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+@keyframes fadeUp {
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}

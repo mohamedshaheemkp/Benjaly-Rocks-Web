@@ -25,7 +25,15 @@
 
   <!-- Main custom stylesheet -->
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
+
+<a href="https://wa.me/919946452005"
+   class="floating-whatsapp"
+   target="_blank">
+
+   <i class="fab fa-whatsapp"></i>
+</a>
 
 <body>
 
@@ -70,6 +78,7 @@
 
     <!-- 1. HERO SECTION -->
     <section id="hero" class="hero-section text-light">
+      <div class="section-glow"></div>
       <div class="hero-bg-lines"></div>
       <div class="hero-floating-glow glow-1"></div>
       <div class="hero-floating-glow glow-2"></div>
@@ -91,7 +100,7 @@
           and commercial projects.
         </p>
 
-        <div class="hero-actions animate-fade-in">
+        <div class="hero-actions animate-fade-in" data-aos="fade-up" data-aos-delay="300">
           <a href="#catalogue" class="btn btn-primary">
             Explore Collection
           </a>
@@ -139,9 +148,24 @@
       </div>
     </section>
 
+    <section class="trust-strip">
+
+      <div class="trust-track">
+
+        <span>Premium Tiles</span>
+        <span>Interlock Experts</span>
+        <span>Luxury Elevation</span>
+        <span>Kerala Projects</span>
+        <span>Architect Support</span>
+        <span>20+ Years Experience</span>
+
+      </div>
+
+    </section>
 
     <!-- 2. TRUST BADGES ROW -->
     <section id="trust-badges" class="trust-badges-section">
+      <div class="section-glow"></div>
       <div class="container">
         <div class="badges-grid">
 
@@ -192,9 +216,10 @@
 
     <!-- 3. PRODUCT CATEGORIES SECTION -->
     <section id="categories" class="categories-section section-padding">
+      <div class="section-glow"></div>
       <div class="container">
 
-        <div class="section-header text-center animate-scroll-reveal">
+        <div class="section-header text-center animate-scroll-reveal" data-aos="fade-up">
           <span class="section-tag">// WHAT WE OFFER</span>
           <h2 class="section-title text-light">Our Premium Categories</h2>
           <p class="section-subtitle">Obsessively engineered building materials that blend architectural luxury with
@@ -310,9 +335,10 @@
 
     <!-- 4. CATALOGUE SECTION WITH DYNAMIC FILTER -->
     <section id="catalogue" class="catalogue-section section-padding">
+      <div class="section-glow"></div>
       <div class="container">
 
-        <div class="section-header text-center animate-scroll-reveal">
+        <div class="section-header text-center animate-scroll-reveal" data-aos="fade-up">
           <span class="section-tag">// PRODUCT CATALOGUE</span>
           <h2 class="section-title text-light">Explore Architectural Finishes</h2>
           <p class="section-subtitle">Filter through our select showroom collection of premium tiles and building
@@ -333,10 +359,10 @@
         <div class="catalogue-grid" id="catalogue-grid-products">
 
           <!-- Product 1: Solid Concrete Hollow Block -->
-          <div class="catalogue-card animate-scroll-reveal" data-category="heavy-duty outdoor" id="product-card-1">
+          <div class="catalogue-card animate-scroll-reveal" data-aos="zoom-in-up" data-category="heavy-duty outdoor" id="product-card-1">
             <div class="catalogue-img-wrapper">
               <img
-                src="public/images/products/imgi_16_benjaly-rocks-tiles-and-hollow-bricks-chemmad-malappuram-interlocking-bric.webp"
+                src="public/images/catalogue1.jpg"
                 alt="Hollow concrete block stack" class="catalogue-img">
               <span class="catalogue-tag">Heavy Duty</span>
             </div>
@@ -354,10 +380,10 @@
           </div>
 
           <!-- Product 2: Roman Clay Interlocking Paver -->
-          <div class="catalogue-card animate-scroll-reveal" data-category="outdoor parking premium" id="product-card-2">
+          <div class="catalogue-card animate-scroll-reveal" data-aos="zoom-in-up" data-category="outdoor parking premium" id="product-card-2">
             <div class="catalogue-img-wrapper">
               <img
-                src="public/images/products/imgi_8_benjaly-rocks-tiles-and-hollow-bricks-chemmad-malappuram-interlocking-brick.webp"
+                src="public/images/catalogue2.jpg"
                 alt="Grey interlock pavers installation" class="catalogue-img">
               <span class="catalogue-tag">Premium</span>
             </div>
@@ -375,9 +401,9 @@
           </div>
 
           <!-- Product 3: Calacatta Gold Marble Tile -->
-          <div class="catalogue-card animate-scroll-reveal" data-category="indoor premium" id="product-card-3">
+          <div class="catalogue-card animate-scroll-reveal" data-aos="zoom-in-up" data-category="indoor premium" id="product-card-3">
             <div class="catalogue-img-wrapper">
-              <img src="public/images/products/imgi_33_-xszy8c6qcs.webp" alt="Vitrified tile showroom display"
+              <img src="public/images/catalogue1.jpg" alt="Vitrified tile showroom display"
                 class="catalogue-img">
               <span class="catalogue-tag">Premium Showroom</span>
             </div>
@@ -395,9 +421,9 @@
           </div>
 
           <!-- Product 4: Slate Texture Exterior Wall Cladding -->
-          <div class="catalogue-card animate-scroll-reveal" data-category="indoor outdoor premium" id="product-card-4">
+          <div class="catalogue-card animate-scroll-reveal" data-aos="zoom-in-up" data-category="indoor outdoor premium" id="product-card-4">
             <div class="catalogue-img-wrapper">
-              <img src="public/images/products/imgi_36_-m1fooaz1s1.webp" alt="Slate cladding wall tile texture"
+              <img src="public/images/catalogue2.jpg" alt="Slate cladding wall tile texture"
                 class="catalogue-img">
               <span class="catalogue-tag">Premium</span>
             </div>
@@ -415,11 +441,11 @@
           </div>
 
           <!-- Product 5: Titan Heavy-Duty Parking Tile -->
-          <div class="catalogue-card animate-scroll-reveal" data-category="parking outdoor heavy-duty"
+          <div class="catalogue-card animate-scroll-reveal" data-aos="zoom-in-up" data-category="parking outdoor heavy-duty"
             id="product-card-5">
             <div class="catalogue-img-wrapper">
               <img
-                src="public/images/products/imgi_20_benjaly-rocks-tiles-and-hollow-bricks-chemmad-malappuram-interlocking-bric.webp"
+                src="public/images/catalogue1.jpg"
                 alt="Heavy duty outdoor parking tile installation" class="catalogue-img">
               <span class="catalogue-tag">Heavy Duty</span>
             </div>
@@ -437,10 +463,10 @@
           </div>
 
           <!-- Product 6: Hexagonal Grass-Paver Blocks -->
-          <div class="catalogue-card animate-scroll-reveal" data-category="outdoor heavy-duty" id="product-card-6">
+          <div class="catalogue-card animate-scroll-reveal" data-aos="zoom-in-up" data-category="outdoor heavy-duty" id="product-card-6">
             <div class="catalogue-img-wrapper">
               <img
-                src="public/images/products/imgi_21_benjaly-rocks-tiles-and-hollow-bricks-chemmad-malappuram-interlocking-bric.webp"
+                src="public/images/catalogue2.jpg"
                 alt="Hexagonal garden paver block pathway" class="catalogue-img">
               <span class="catalogue-tag">Outdoor</span>
             </div>
@@ -464,9 +490,10 @@
 
     <!-- 5. PROJECT SHOWCASE SECTION -->
     <section id="projects" class="projects-section section-padding">
+      <div class="section-glow"></div>
       <div class="container">
 
-        <div class="section-header text-center animate-scroll-reveal">
+        <div class="section-header text-center animate-scroll-reveal" data-aos="fade-up">
           <span class="section-tag">// ARCHITECTURAL GALLERY</span>
           <h2 class="section-title text-light">Real Installations & Spaces</h2>
           <p class="section-subtitle">A stunning look at modern Kerala homes and outdoor yards built beautifully with
@@ -477,78 +504,99 @@
 
           <!-- Project Card 1: Interactive Before/After Courtyard Interlock -->
           <div class="project-masonry-card before-after-card animate-scroll-reveal" id="proj-card-1">
-            <div class="before-after-container">
-              <!-- After Image (Background) -->
-              <img
-                src="public/images/projects/imgi_4_benjaly-rocks-tiles-and-hollow-bricks-chemmad-malappuram-interlocking-brick.webp"
-                alt="Finished interlocking pavement courtyard after installation" class="ba-image after-image">
+            <div class="project-card" data-aos="fade-up">
+              <div class="project-image-wrapper">
+                <div class="before-after-container">
+                  <img
+                    src="public/images/project1.jpg"
+                    alt="Finished interlocking pavement courtyard after installation" class="ba-image after-image">
 
-              <!-- Before Image (Overlapping cropped foreground) -->
-              <img
-                src="public/images/projects/imgi_3_benjaly-rocks-tiles-and-hollow-bricks-chemmad-malappuram-interlocking-brick.webp"
-                alt="Construction site ground before interlocking work" class="ba-image before-image">
+                  <img
+                    src="public/images/project2.jpg"
+                    alt="Construction site ground before interlocking work" class="ba-image before-image">
 
-              <!-- Drag Handle Line & Circular Icon -->
-              <div class="slider-handle-line" id="ba-handle-line-1">
-                <div class="slider-handle-button">
-                  <i class="fas fa-arrows-left-right"></i>
+                  <div class="slider-handle-line" id="ba-handle-line-1">
+                    <div class="slider-handle-button">
+                      <i class="fas fa-arrows-left-right"></i>
+                    </div>
+                  </div>
+
+                  <input type="range" min="0" max="100" value="50" class="ba-range-slider" id="ba-range-slider-input-1"
+                    aria-label="Before and after visual comparison slider">
+
+                  <span class="ba-label before-label">Before</span>
+                  <span class="ba-label after-label">After</span>
                 </div>
+
+                <div class="project-badge">Interactive</div>
               </div>
 
-              <!-- HTML5 Range Input Slider -->
-              <input type="range" min="0" max="100" value="50" class="ba-range-slider" id="ba-range-slider-input-1"
-                aria-label="Before and after visual comparison slider">
-
-              <!-- Label indicators -->
-              <span class="ba-label before-label">Before</span>
-              <span class="ba-label after-label">After</span>
-            </div>
-
-            <div class="project-overlay-content pointer-events-none">
-              <span class="project-cat">Interactive Transformation</span>
-              <h3 class="project-name">Pavement Installation Slider</h3>
-              <p class="project-location"><i class="fas fa-location-dot"></i> Chemmad, Malappuram</p>
+              <div class="project-content">
+                <span class="project-location"><i class="fas fa-location-dot"></i> Chemmad, Malappuram</span>
+                <h3>Pavement Installation Slider</h3>
+                <p class="project-type">Project Type: Interlocking Pavement</p>
+                <p class="project-year">Completed: 2023</p>
+                <p>Interactive before/after comparison of a courtyard interlock installation.</p>
+              </div>
             </div>
           </div>
 
           <!-- Project Card 2: Luxury Living Area -->
           <div class="project-masonry-card animate-scroll-reveal h-medium" id="proj-card-2">
-            <div class="project-img-container">
-              <img
-                src="public/images/projects/imgi_5_benjaly-rocks-tiles-and-hollow-bricks-chemmad-malappuram-interlocking-brick.webp"
-                alt="Premium tile flooring installation in Kerala home" class="project-img">
-              <div class="project-overlay-content">
-                <span class="project-cat">Luxury Indoors</span>
-                <h3 class="project-name">Calacatta Marble Flooring</h3>
-                <p class="project-location"><i class="fas fa-location-dot"></i> Kottakkal, Malappuram</p>
+            <div class="project-card" data-aos="fade-up">
+              <div class="project-image-wrapper">
+                <img
+                  src="public/images/project3.jpg"
+                  alt="Premium tile flooring installation in Kerala home">
+                <div class="project-badge premium">Premium</div>
+              </div>
+
+              <div class="project-content">
+                <span class="project-location">Kottakkal, Malappuram</span>
+                <h3>Calacatta Marble Flooring</h3>
+                <p class="project-type">Project Type: Interior Flooring</p>
+                <p class="project-year">Completed: 2024</p>
+                <p>Premium marble-look vitrified tiles used to create a grand living area finish.</p>
               </div>
             </div>
           </div>
 
           <!-- Project Card 3: Commercial Path Paving -->
           <div class="project-masonry-card animate-scroll-reveal h-tall" id="proj-card-3">
-            <div class="project-img-container">
-              <img
-                src="public/images/projects/imgi_6_benjaly-rocks-tiles-and-hollow-bricks-chemmad-malappuram-interlocking-brick.webp"
-                alt="Commercial parking yard paved with interlock tiles" class="project-img">
-              <div class="project-overlay-content">
-                <span class="project-cat">Heavy Duty Commercial</span>
-                <h3 class="project-name">Corporate Yard Paving</h3>
-                <p class="project-location"><i class="fas fa-location-dot"></i> Tirur, Kerala</p>
+            <div class="project-card" data-aos="fade-up">
+              <div class="project-image-wrapper">
+                <img
+                  src="public/images/project1.jpg"
+                  alt="Commercial parking yard paved with interlock tiles">
+                <div class="project-badge">Commercial</div>
+              </div>
+
+              <div class="project-content">
+                <span class="project-location">Tirur, Kerala</span>
+                <h3>Corporate Yard Paving</h3>
+                <p class="project-type">Project Type: Commercial Paving</p>
+                <p class="project-year">Completed: 2022</p>
+                <p>High-load interlock installation for a corporate campus driveway and service yard.</p>
               </div>
             </div>
           </div>
 
           <!-- Project Card 4: Hollow Brick Screen Facade -->
           <div class="project-masonry-card animate-scroll-reveal" id="proj-card-4">
-            <div class="project-img-container">
-              <img
-                src="public/images/projects/imgi_7_benjaly-rocks-tiles-and-hollow-bricks-chemmad-malappuram-interlocking-brick.webp"
-                alt="Hollow brick construction facade exterior" class="project-img">
-              <div class="project-overlay-content">
-                <span class="project-cat">Architectural Facade</span>
-                <h3 class="project-name">Exposed Block Screen Wall</h3>
-                <p class="project-location"><i class="fas fa-location-dot"></i> Calicut, Kerala</p>
+            <div class="project-card" data-aos="fade-up">
+              <div class="project-image-wrapper">
+                <img
+                  src="public/images/project2.jpg"
+                  alt="Hollow brick construction facade exterior">
+                <div class="project-badge">Architectural</div>
+              </div>
+
+              <div class="project-content">
+                <span class="project-location">Calicut, Kerala</span>
+                <h3>Exposed Block Screen Wall</h3>
+                <p class="project-type">Project Type: Exterior Facade</p>
+                <p class="project-year">Completed: 2021</p>
+                <p>Decorative hollow brick screen providing daylighting and passive ventilation for the facade.</p>
               </div>
             </div>
           </div>
@@ -560,9 +608,10 @@
 
     <!-- 6. WHY CHOOSE US SECTION (LOCAL TRUST SECTION) -->
     <section id="why-choose-us" class="why-choose-us-section section-padding">
+      <div class="section-glow"></div>
       <div class="container">
 
-        <div class="section-header text-center animate-scroll-reveal">
+        <div class="section-header text-center animate-scroll-reveal" data-aos="fade-up">
           <span class="section-tag">// WHY BENJALY ROCKS</span>
           <h2 class="section-title text-light">Built for Strength. Engineered for Trust.</h2>
           <p class="section-subtitle">Operating since 2005, we deliver certified raw materials, durable concrete
@@ -633,6 +682,7 @@
 
     <!-- 7. ABOUT COMPANY SECTION -->
     <section id="about" class="about-section section-padding">
+      <div class="section-glow"></div>
       <div class="container">
         <div class="about-grid">
 
@@ -733,9 +783,10 @@
 
     <!-- 7. INSTAGRAM STYLE SHOWCASE SECTION -->
     <section id="instagram-gallery" class="instagram-section section-padding">
+      <div class="section-glow"></div>
       <div class="container">
 
-        <div class="section-header text-center animate-scroll-reveal">
+        <div class="section-header text-center animate-scroll-reveal" data-aos="fade-up">
           <span class="section-tag">// INSTAGRAM REELS & UPDATES</span>
           <h2 class="section-title text-light">Creative Texture Showcase</h2>
           <p class="section-subtitle">Visual snapshots of concrete patterns, raw textures, and modern installations
@@ -796,9 +847,10 @@
 
     <!-- 8. CONTACT & MAP SECTION -->
     <section id="contact" class="contact-section section-padding">
+      <div class="section-glow"></div>
       <div class="container">
 
-        <div class="section-header text-center animate-scroll-reveal">
+        <div class="section-header text-center animate-scroll-reveal" data-aos="fade-up">
           <span class="section-tag">// GET IN TOUCH</span>
           <h2 class="section-title text-light">Let's Discuss Your Project</h2>
           <p class="section-subtitle">Drop your details below to generate a pre-formatted WhatsApp quote request
@@ -966,6 +1018,31 @@
 
   <!-- Main interactive JS script -->
   <script src="app.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    duration: 1200,
+    once: true,
+    offset: 100
+  });
+</script>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+
+  <script>
+    const lenis = new Lenis({
+      duration: 1.2,
+      smoothWheel: true,
+      smoothTouch: false
+    })
+
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+  </script>
 </body>
 
 </html>
