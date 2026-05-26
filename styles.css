@@ -330,30 +330,34 @@ input, select, textarea, button {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('public/images/hero/hero.webp');
+  background-image: url('public/images/products/imgi_13_benjaly-rocks-tiles-and-hollow-bricks-chemmad-malappuram-interlocking-bric.webp');
   background-size: cover;
-  background-position: center;
+  background-position: center 40%;
   background-repeat: no-repeat;
   z-index: 0;
-  animation: kenBurnsZoom 24s ease-in-out infinite alternate;
+  animation: kenBurnsZoom 28s ease-in-out infinite alternate;
 }
 
 @keyframes kenBurnsZoom {
   0% {
-    transform: scale(1);
+    transform: scale(1) translateY(0);
   }
   100% {
-    transform: scale(1.08);
+    transform: scale(1.06) translateY(-12px);
   }
 }
 
+/* Layered cinematic overlay — left text protection + bottom vignette */
 .hero-bg-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(10, 11, 13, 0.95) 20%, rgba(10, 11, 13, 0.7) 60%, rgba(10, 11, 13, 0.3) 100%);
+  background:
+    linear-gradient(to right,  rgba(10, 11, 13, 0.97) 0%,  rgba(10, 11, 13, 0.82) 45%, rgba(10, 11, 13, 0.35) 100%),
+    linear-gradient(to top,    rgba(10, 11, 13, 0.98) 0%,  rgba(10, 11, 13, 0.55) 30%, transparent 65%),
+    linear-gradient(to bottom, rgba(10, 11, 13, 0.6)  0%,  transparent 25%);
   z-index: 1;
 }
 
@@ -594,7 +598,7 @@ input, select, textarea, button {
 .category-img-wrapper {
   position: relative;
   width: 100%;
-  padding-top: 66.6%; /* 3:2 Aspect Ratio */
+  padding-top: 72%; /* Slightly taller for stronger texture presentation */
   overflow: hidden;
 }
 
@@ -605,11 +609,14 @@ input, select, textarea, button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  object-position: center 35%; /* Pull slightly above center for better composition */
+  transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+  filter: brightness(0.92) contrast(1.05);
 }
 
 .category-card:hover .category-img {
-  transform: scale(1.08);
+  transform: scale(1.07);
+  filter: brightness(1) contrast(1.08) saturate(1.05);
 }
 
 .category-overlay {
@@ -618,7 +625,14 @@ input, select, textarea, button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, rgba(18, 20, 23, 0.5) 0%, transparent 100%);
+  background:
+    linear-gradient(to top, rgba(10, 11, 13, 0.75) 0%, rgba(10, 11, 13, 0.2) 50%, transparent 100%);
+  transition: background 0.5s ease;
+}
+
+.category-card:hover .category-overlay {
+  background:
+    linear-gradient(to top, rgba(10, 11, 13, 0.85) 0%, rgba(197, 168, 128, 0.04) 50%, transparent 100%);
 }
 
 .category-details {
@@ -750,11 +764,14 @@ input, select, textarea, button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  object-position: center 30%; /* Prioritize upper-center for texture and pattern visibility */
+  transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+  filter: brightness(0.9) contrast(1.06);
 }
 
 .catalogue-card:hover .catalogue-img {
-  transform: scale(1.08);
+  transform: scale(1.07);
+  filter: brightness(1.02) contrast(1.08) saturate(1.06);
 }
 
 .catalogue-tag {
