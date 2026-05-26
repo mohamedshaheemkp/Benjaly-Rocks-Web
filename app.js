@@ -42,14 +42,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
+  const heroContent = document.querySelector('.hero-content');
+  const handleHeroParallax = () => {
+    const scrollVal = window.scrollY;
+    if (scrollVal < window.innerHeight && heroContent) {
+      heroContent.style.transform = `translateY(${scrollVal * 0.12}px)`;
+      heroContent.style.opacity = `${1 - scrollVal * 0.0015}`;
+    }
+  };
+
   window.addEventListener('scroll', () => {
     handleHeaderScroll();
     handleActiveSectionHighlight();
+    handleHeroParallax();
   });
 
   // Run once on load
   handleHeaderScroll();
   handleActiveSectionHighlight();
+  handleHeroParallax();
 
 
   /* --- 2. MOBILE INTERACTIVE NAVIGATION NAVIGATION --- */
