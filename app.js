@@ -214,4 +214,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* --- 7. INTERACTIVE BEFORE/AFTER SLIDER COMPARISON --- */
+  const rangeSlider = document.getElementById('ba-range-slider-input-1');
+  const beforeImage = document.querySelector('.before-image');
+  const handleLine = document.getElementById('ba-handle-line-1');
+
+  if (rangeSlider && beforeImage && handleLine) {
+    const updateBAComparison = () => {
+      const sliderVal = rangeSlider.value;
+      // Set the CSS Custom Property on beforeImage to crop it
+      beforeImage.style.setProperty('--clip-percent', `${sliderVal}%`);
+      // Update the left position of the vertical brass handle line
+      handleLine.style.left = `${sliderVal}%`;
+    };
+
+    // Attach drag and slide event listeners for real-time responsiveness
+    rangeSlider.addEventListener('input', updateBAComparison);
+    rangeSlider.addEventListener('change', updateBAComparison);
+
+    // Run once on load to initialize layout at 50% split
+    updateBAComparison();
+  }
+
 });

@@ -246,7 +246,7 @@
               <div class="category-overlay"></div>
             </div>
             <div class="category-details">
-              <h3 class="category-card-title">Paver Blocks</h3>
+              <h3 class="category-card-title">Designer Pavers</h3>
               <p class="category-card-desc">Designer concrete paving blocks in beautiful geometric shapes, ideal for landscape walks.</p>
               <a href="#catalogue" class="category-card-link" data-filter="outdoor" id="cat-link-pavers">Explore Pavers <i class="fas fa-arrow-right-long"></i></a>
             </div>
@@ -399,15 +399,34 @@
 
         <div class="projects-masonry">
 
-          <!-- Project Card 1: Courtyard Interlock -->
-          <div class="project-masonry-card animate-scroll-reveal" id="proj-card-1">
-            <div class="project-img-container">
-              <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Beautiful courtyard paved with grey interlock blocks" class="project-img">
-              <div class="project-overlay-content">
-                <span class="project-cat">Driveway & Courtyard</span>
-                <h3 class="project-name">Chemmad Villa Courtyard</h3>
-                <p class="project-location"><i class="fas fa-location-dot"></i> Chemmad, Malappuram</p>
+          <!-- Project Card 1: Interactive Before/After Courtyard Interlock -->
+          <div class="project-masonry-card before-after-card animate-scroll-reveal" id="proj-card-1">
+            <div class="before-after-container">
+              <!-- After Image (Background) -->
+              <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Beautiful finished paved villa yard courtyard after interlock work" class="ba-image after-image">
+              
+              <!-- Before Image (Overlapping cropped foreground) -->
+              <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80" alt="Raw gravel driveway ground site before interlocking work" class="ba-image before-image">
+              
+              <!-- Drag Handle Line & Circular Icon -->
+              <div class="slider-handle-line" id="ba-handle-line-1">
+                <div class="slider-handle-button">
+                  <i class="fas fa-arrows-left-right"></i>
+                </div>
               </div>
+              
+              <!-- HTML5 Range Input Slider -->
+              <input type="range" min="0" max="100" value="50" class="ba-range-slider" id="ba-range-slider-input-1" aria-label="Before and after visual comparison slider">
+              
+              <!-- Label indicators -->
+              <span class="ba-label before-label">Before</span>
+              <span class="ba-label after-label">After</span>
+            </div>
+            
+            <div class="project-overlay-content pointer-events-none">
+              <span class="project-cat">Interactive Transformation</span>
+              <h3 class="project-name">Pavement Installation Slider</h3>
+              <p class="project-location"><i class="fas fa-location-dot"></i> Chemmad, Malappuram</p>
             </div>
           </div>
 
@@ -697,6 +716,14 @@
               </p>
             </div>
 
+            <div class="info-block" id="contact-info-working-hours">
+              <h3 class="contact-subheading">Working Hours</h3>
+              <p class="address-paragraph">
+                <i class="fas fa-clock contact-icon"></i>
+                <span>Monday – Saturday: 8:30 AM – 7:30 PM<br>Sunday: Closed</span>
+              </p>
+            </div>
+
             <!-- Styled Map Container with dynamic fallback -->
             <div class="map-container-box">
               <iframe 
@@ -771,6 +798,17 @@
       </div>
     </div>
   </footer>
+
+  <!-- Floating Sticky WhatsApp Button for Mobile Optimization -->
+  <a href="https://wa.me/919946452005?text=Hi%20Benjaly%20Rocks,%20I'd%20like%20to%20make%20a%20product%20enquiry." 
+     class="sticky-whatsapp-btn" 
+     id="btn-sticky-whatsapp-mobile" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="Contact Benjaly Rocks on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-btn-text">Enquire Now</span>
+  </a>
 
   <!-- Main interactive JS script -->
   <script src="app.js"></script>
