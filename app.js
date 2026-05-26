@@ -248,3 +248,25 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+/* ==========================================
+   ADVANCED SCROLL REVEALS
+========================================== */
+
+const revealElements = document.querySelectorAll(
+  '.section-header, .catalogue-card, .project-card, .hero-stat-item'
+);
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('revealed');
+    }
+  });
+}, {
+  threshold: 0.15
+});
+
+revealElements.forEach((element) => {
+  element.classList.add('animate-scroll-reveal');
+  revealObserver.observe(element);
+});
